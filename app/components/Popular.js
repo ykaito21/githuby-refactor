@@ -78,20 +78,16 @@ RepoGrid.propTypes = {
 };
 
 class Popular extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedLang: "All",
-      repos: null
-    };
-    this.handleLang = this.handleLang.bind(this);
-  }
+  state = {
+    selectedLang: "All",
+    repos: null
+  };
 
   componentDidMount() {
     this.handleLang(this.state.selectedLang);
   }
 
-  handleLang(lang) {
+  handleLang = lang => {
     this.setState(() => ({
       selectedLang: lang,
       repos: null
@@ -102,7 +98,7 @@ class Popular extends React.Component {
         repos
       }));
     });
-  }
+  };
   render() {
     const { repos, selectedLang } = this.state;
     return (
