@@ -78,8 +78,8 @@ class Results extends React.Component {
     this.setState(() => ({
       error: null,
       loading: false,
-      winner: results[0],
-      loser: results[1]
+      winner: players[0],
+      loser: players[1]
     }));
   }
 

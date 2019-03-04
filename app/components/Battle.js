@@ -19,7 +19,7 @@ class PlayerInput extends React.Component {
   };
 
   handleChange = e => {
-    value = e.target.value;
+    const value = e.target.value;
     this.setState(() => ({
       username: value
     }));
